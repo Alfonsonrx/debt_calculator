@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./debt.css">
+    <title>Debt interest Calculator</title>
+</head>
+<body>
+    <center>
+        <main>
+            <div class="titulo">
+                <center>
+                    <h1>Calculate your interest</h1>
+                </center>
+            </div>
+            <div class="principal">
+                <div class="part-left">
+                    <div class="entrada">
+                        <label for="inputDebt">How much is your debt?</label>
+                        <input placeholder="Debt" type="number" id="inputDebt">
+                    </div> 
+                    <div class="entrada">
+                        <label for="inputInterest">How much is the interest?</label>
+                        <input placeholder="Interest" type="number" id="inputInterest">
+                    </div>
+                </div>
+                <div class="part-right">
+                    <div class="entrada">
+                        <label for="inputYears">How many years is distributed?</label>
+                        <input placeholder="Years" type="number" id="inputYears">
+                    </div> 
+                    <div class="entrada">
+                        <label for="comboDebt">Type of interest?</label>
+                        <select id="comboDebt" onchange="run()">
+                            <option value="1">Simple</option>
+                            <option value="2">Compound</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="botones">
+                <button onclick="calcular()">Calculate</button>
+                <button>Reset</button>            
+            </div>
+            <p id="results"></p>
+        </main>
+    </center>
+</body>
+<footer>
+    <script src="./ejecutar.js"></script>
+    <script src="./functions.js"></script>
+</footer>
+</html>
